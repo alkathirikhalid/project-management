@@ -34,7 +34,9 @@
                 </actions>
             </entityPicker>
             <select id="priorityField" property="priority"/>
-            <textArea id="descriptionField" height="9.5em" property="description"/>
+            <!-- Bug on EAGER Refresh and Trims values <textArea id="descriptionField" height="9.5em" property="description" maxLength="500" valueChangeMode="EAGER"/>-->
+            <textArea id="descriptionField" height="9.5em" property="description" maxLength="500"
+                      valueChangeMode="ON_CHANGE"/>
             <textField id="estimationField" property="estimation"/>
             <entityPicker id="projectField" property="project">
                 <actions>
