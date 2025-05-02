@@ -10,6 +10,5 @@ import io.jmix.flowui.view.*;
 @ViewController(id = "Project.list")
 @ViewDescriptor(path = "project-list-view.xml")
 @LookupComponent("projectsDataGrid")
-@DialogMode(width = "64em")
 public class ProjectListView extends StandardListView<Project> {
 }
