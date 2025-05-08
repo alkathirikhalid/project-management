@@ -17,12 +17,22 @@ This project demonstrates a full-stack Java web application, using Java for both
 
 ![Project Management Screenshot](docs/projectmanagement.png)
 
-## Running the Application
+## Building the Application
 
 The default DB of HSQLDB has been switched to PostgreSQL in application.properties
 
 Build a java File
 <pre>./gradlew -Pvaadin.productionMode=true bootJar</pre>
 
+Build a War File
+<pre>./gradlew -Pvaadin.productionMode=true bootWar</pre>
+
+## Running the Application
+
 Change Directory into /build/libs and execute Jar File
 <pre>java -jar ProjectManagement-0.0.1-SNAPSHOT.jar</pre>
+
+To deploy the WAR file, use Apache Tomcat 10 or later, with support for Jakarta EE 9 (jakarta.* namespace).
+Copy the WAR file to the webapps folder of your Tomcat installation.
+
+
