@@ -16,3 +16,13 @@ This project demonstrates a full-stack Java web application, using Java for both
 ## Project Preview
 
 ![Project Management Screenshot](docs/projectmanagement.png)
+
+## Running the Application
+
+The default DB of HSQLDB has been switched to PostgreSQL in application.properties
+
+Build a java File
+<pre>./gradlew -Pvaadin.productionMode=true bootJar</pre>
+
+Change Directory into /build/libs and execute Jar File
+<pre>java -jar ProjectManagement-0.0.1-SNAPSHOT.jar</pre>
