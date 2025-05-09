@@ -35,4 +35,21 @@ Change Directory into /build/libs and execute Jar File
 To deploy the WAR file, use Apache Tomcat 10 or later, with support for Jakarta EE 9 (jakarta.* namespace).
 Copy the WAR file to the webapps folder of your Tomcat installation.
 
+## Externalizing Application Properties
 
+The application.properties file can contain placeholders for sensitive or environment-specific configuration values. These placeholders can be supplied at runtime via environment variables.
+
+<pre>main.datasource.username=${DB_USER}
+main.datasource.password=${DB_PASSWORD}</pre>
+
+Running the application
+
+<pre>
+  export DB_USER=user
+  export DB_PASSWORD=password
+  java -jar ProjectManagement-0.0.1-SNAPSHOT.jar
+</pre>
+
+Or you may use Multiple profiles such as application-prod.properties with the properties required
+
+<pre>java -Dspring.profiles.active=prod -jar ProjectManagement-0.0.1-SNAPSHOT.jar</pre>
